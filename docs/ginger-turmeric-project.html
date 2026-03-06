@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Ginger & Turmeric - Project Plan</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(135deg, #d4a017 0%, #b8860b 100%);
+      color: white;
+      padding: 2em;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    header p { font-size: 1.1em; opacity: 0.9; }
+    .breadcrumb {
+      max-width: 900px;
+      margin: 1em auto;
+      padding: 0 1em;
+    }
+    .breadcrumb a { color: #d4a017; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+    .overview {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-left: 5px solid #d4a017;
+    }
+    .overview h2 { color: #d4a017; margin-bottom: 1em; }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+    .overview-item { background: #fefcf0; padding: 1em; border-radius: 4px; }
+    .overview-item strong { display: block; color: #d4a017; font-size: 0.9em; text-transform: uppercase; margin-bottom: 0.3em; }
+    .phase {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .phase h2 {
+      color: white;
+      background: #d4a017;
+      padding: 1em;
+      margin: -2em -2em 1em -2em;
+      border-radius: 8px 8px 0 0;
+      font-size: 1.4em;
+    }
+    .timeline-item {
+      margin: 1.5em 0;
+      padding: 1em;
+      background: #fefcf0;
+      border-left: 4px solid #d4a017;
+      border-radius: 4px;
+    }
+    .timeline-item h3 { color: #d4a017; margin-bottom: 0.5em; font-size: 1.1em; }
+    .timeline-item strong { display: block; color: #b8860b; margin: 0.5em 0; }
+    .task-list {
+      margin: 1em 0;
+      padding-left: 1.5em;
+    }
+    .task-list li { margin: 0.5em 0; }
+    .cost-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .revenue-box {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .critical-box {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .success-factors {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-left: 5px solid #28a745;
+    }
+    .success-factors h2 { color: #28a745; margin-bottom: 1em; }
+    .success-factors ol { margin-left: 2em; }
+    .success-factors li { margin: 0.5em 0; }
+    .financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      background: white;
+    }
+    .financial-table th {
+      background: #d4a017;
+      color: white;
+      padding: 1em;
+      text-align: left;
+    }
+    .financial-table td {
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+    }
+    .financial-table tr:hover { background: #f9f9f9; }
+    .button-group {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .button-group a {
+      display: inline-block;
+      padding: 1em 2em;
+      background: #d4a017;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5em;
+      transition: background 0.3s;
+    }
+    .button-group a:hover { background: #b8860b; }
+    footer {
+      background: #d4a017;
+      color: white;
+      text-align: center;
+      padding: 2em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ Premium Ginger & Turmeric</h1>
+    <p>Detailed Project Plan | Santa Puala Farm</p>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <main>
+    <div class="overview">
+      <h2>Project Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-item">
+          <strong>Space</strong>
+          0.10 acre (4,350 sq ft)
+        </div>
+        <div class="overview-item">
+          <strong>Timeline</strong>
+          March 2026 - Nov 2027
+        </div>
+        <div class="overview-item">
+          <strong>Revenue Target</strong>
+          $8,000 - $12,000/year
+        </div>
+        <div class="overview-item">
+          <strong>Growing Cycle</strong>
+          7 months in tunnel
+        </div>
+      </div>
+      <p style="margin-top: 1em; color: #666; font-size: 0.95em;">High-value specialty crops that sell for $8-$15/lb. Requires protected culture (high tunnel) and 7-month growing season. Year 1 focuses on infrastructure, Year 2 on harvest and sales.</p>
+    </div>
+
+    <div class="phase">
+      <h2>📋 Phase 1: Grants & Infrastructure Planning (January - August 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>January-February: Grant Research</h3>
+        <strong>⏱️ Time: 12-15 hours</strong>
+        <ul class="task-list">
+          <li>Research NRCS EQIP high tunnel cost-share (50-75% reimbursement)</li>
+          <li>Get quotes from 3 tunnel suppliers (30x48 size)</li>
+          <li>Work with NRCS conservation planner on application</li>
+          <li>Complete NC AgVentures application including tunnel costs</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 High Tunnel Cost: $5,000-$8,000</strong><br/>
+          EQIP covers: $2,500-$6,000<br/>
+          NC AgVentures covers: Up to $10,000
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>March 2026: Submit Applications</h3>
+        <strong>⏱️ Time: 8 hours</strong>
+        <ul class="task-list">
+          <li>Submit EQIP application (March 15 deadline)</li>
+          <li>Mark out tunnel location (flat, well-drained)</li>
+          <li>Soil test tunnel site</li>
+          <li><strong>Critical:</strong> Order ginger and turmeric rhizomes for May delivery</li>
+        </ul>
+        <div class="critical-box">
+          <strong>⚠️ CRITICAL DEADLINE:</strong> Order seed rhizomes by late March. They're shipped May for spring planting.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>April-August: Waiting & Planning</h3>
+        <strong>⏱️ Time: Variable</strong>
+        <ul class="task-list">
+          <li>Expect EQIP decision (4-8 weeks after deadline)</li>
+          <li>Submit NC AgVentures application as backup</li>
+          <li>If EQIP approved by June: proceed to Phase 2</li>
+          <li>If EQIP delayed: consider postponing to 2027</li>
+        </ul>
+        <div class="revenue-box">
+          <strong>🎯 Timeline Decision Point:</strong> EQIP approval = September installation → May 2027 planting
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🔧 Phase 2: High Tunnel Installation (August-September 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>August: Order & Site Prep</h3>
+        <strong>⏱️ Time: 16-20 hours</strong>
+        <ul class="task-list">
+          <li>Once EQIP approved, order high tunnel (8-12 week lead time)</li>
+          <li>Clear and level tunnel site (may need small equipment rental)</li>
+          <li>Prepare raised beds or mounded rows</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Site Prep: $200-$400 equipment rental + $600-$1,000 materials</strong>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>September: Tunnel Installation</h3>
+        <strong>⏱️ Time: 24-32 hours (2-3 days with help)</strong>
+        <ul class="task-list">
+          <li>High tunnel delivery and installation</li>
+          <li>Install drip irrigation inside tunnel</li>
+          <li>Test ventilation, doors, and climate controls</li>
+          <li>Recommendation: Hire professional installer ($1,000-$1,500)</li>
+        </ul>
+        <div class="revenue-box">
+          <strong>✅ Completed by September 30, 2026</strong><br/>
+          Ready for May 2027 planting season
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🌱 Phase 3: Planting & Growing (May - October 2027)</h2>
+
+      <div class="timeline-item">
+        <h3>May 2027: Pre-Sprouting & Planting</h3>
+        <strong>⏱️ Time: 12-16 hours</strong>
+        <ul class="task-list">
+          <li>Pre-sprout rhizomes indoors in moist potting mix (10-14 days)</li>
+          <li>Maintain temperature 75-80°F</li>
+          <li>Prepare tunnel beds with compost (2-3" deep)</li>
+          <li>Transplant sprouted rhizomes 6-8" apart</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Planting Supplies:</strong><br/>
+          Seed rhizomes: $500-$800<br/>
+          Compost: $300-$500
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>June-October 2027: Growing Season</h3>
+        <strong>⏱️ Time: 4-6 hours/week</strong>
+        <ul class="task-list">
+          <li><strong>Irrigation:</strong> Check soil moisture 3x/week, water deeply (2-3 hrs/week)</li>
+          <li><strong>Weeding:</strong> Hand-weed around plants (1-2 hrs/week)</li>
+          <li><strong>Monitoring:</strong> Check for pests, monitor leaf health (30 min/week)</li>
+          <li><strong>Fertilizing:</strong> Monthly compost tea applications (1 hr/month)</li>
+          <li><strong>Tunnel Management:</strong> Maintain 75-85°F day, 65-75°F night</li>
+        </ul>
+        <div class="revenue-box">
+          <strong>🎯 Leaf emergence:</strong> 4-6 weeks<br/>
+          <strong>Full canopy:</strong> August<br/>
+          <strong>Ready to harvest:</strong> October-November
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🔪 Phase 4: Harvest & Curing (November-December 2027)</h2>
+
+      <div class="timeline-item">
+        <h3>November 2027: Dig & Harvest</h3>
+        <strong>⏱️ Time: 16-24 hours</strong>
+        <ul class="task-list">
+          <li>Stop watering, allow plants to die back (signals maturity)</li>
+          <li>Dig plants carefully with fork or hands</li>
+          <li>Wash rhizomes gently, remove excess soil</li>
+        </ul>
+        <div class="revenue-box">
+          <strong>📊 Expected Yield:</strong><br/>
+          Ginger: 600-900 lbs<br/>
+          Turmeric: 200-400 lbs<br/>
+          Total: 800-1,300 lbs fresh
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>December 2027: Curing & Sales Prep</h3>
+        <strong>⏱️ Time: 8-12 hours</strong>
+        <ul class="task-list">
+          <li>Cure rhizomes in warm (75-80°F), humid area for 7-10 days</li>
+          <li>Sort by size and quality (A-grade fresh, B-grade processing)</li>
+          <li>Save best rhizomes for replanting next year</li>
+          <li>Package and prepare delivery to buyers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🛍️ Phase 5: Sales & Market Development</h2>
+
+      <div class="timeline-item">
+        <h3>Target Markets & Pricing</h3>
+        <ul class="task-list">
+          <li><strong>Specialty Grocery Stores:</strong> Whole Foods, co-ops - $10-$15/lb wholesale</li>
+          <li><strong>Restaurants:</strong> High-end, juice bars - $12-$16/lb</li>
+          <li><strong>Farmers Markets:</strong> Direct consumer - $12-$18/lb retail</li>
+          <li><strong>CSA Add-Ons:</strong> Existing customers - $10-$15/lb</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Marketing Timeline (October 2027)</h3>
+        <ul class="task-list">
+          <li>Contact 5-10 specialty grocers and restaurants with availability notice</li>
+          <li>Use Buyer_Outreach_Templates.md for professional emails</li>
+          <li>Post on social media about upcoming harvest</li>
+          <li>Deliver product samples to interested buyers</li>
+          <li>Negotiate pricing and delivery schedules</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="success-factors">
+      <h2>✨ Critical Success Factors</h2>
+      <ol>
+        <li><strong>Tunnel Timing:</strong> Must be installed by September 2026 for May 2027 planting</li>
+        <li><strong>Quality Seed Rhizomes:</strong> Source from reputable suppliers (Hawaiian Ginger Co., Tropilab, local growers)</li>
+        <li><strong>Temperature Control:</strong> Maintain consistent 75-85°F day/65-75°F night in tunnel</li>
+        <li><strong>Irrigation Precision:</strong> Drip irrigation critical for even moisture</li>
+        <li><strong>Market Development:</strong> Start buyer outreach 6 months before harvest (April 2027)</li>
+      </ol>
+    </div>
+
+    <div class="phase">
+      <h2>💰 Financial Summary</h2>
+
+      <h3 style="color: #d4a017; margin-top: 1.5em;">Year 1 Investment (2026)</h3>
+      <table class="financial-table" style="margin-bottom: 2em;">
+        <tbody>
+          <tr>
+            <td>High tunnel</td>
+            <td style="text-align: right;">$5,000-$8,000</td>
+          </tr>
+          <tr>
+            <td>EQIP reimbursement</td>
+            <td style="text-align: right;">-$2,500 to -$6,000</td>
+          </tr>
+          <tr>
+            <td>NC AgVentures grants</td>
+            <td style="text-align: right;">Up to -$10,000</td>
+          </tr>
+          <tr>
+            <td>Site prep & irrigation</td>
+            <td style="text-align: right;">$500-$900</td>
+          </tr>
+          <tr style="background: #f0f0f0; font-weight: bold;">
+            <td>Net Out-of-Pocket</td>
+            <td style="text-align: right;">$1,000-$2,500</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #d4a017;">Year 2 Operating Costs (2027)</h3>
+      <div class="cost-box">
+        <p><strong>Seed rhizomes:</strong> $500-$800</p>
+        <p><strong>Compost/amendments:</strong> $400-$600</p>
+        <p><strong>Supplies:</strong> $100-$200</p>
+        <p><strong>Total:</strong> $1,100-$1,800</p>
+      </div>
+
+      <h3 style="color: #d4a017; margin-top: 1.5em;">Year 2 Revenue & Profit (2027)</h3>
+      <div class="revenue-box" style="padding: 1.5em;">
+        <p><strong>Ginger:</strong> 700 lbs × $10/lb = $7,000</p>
+        <p><strong>Turmeric:</strong> 300 lbs × $12/lb = $3,600</p>
+        <p style="margin-top: 0.5em; border-top: 1px solid #333; padding-top: 0.5em;"><strong>Gross Revenue: $10,600</strong></p>
+        <p style="font-size: 1.2em; color: #28a745;"><strong>Net Profit: $8,800-$9,500</strong></p>
+      </div>
+
+      <h3 style="color: #d4a017; margin-top: 1.5em;">Year 3+ (With Saved Seed)</h3>
+      <div class="revenue-box" style="padding: 1.5em;">
+        <p><strong>Operating Costs:</strong> $600-$1,000/year (minimal seed cost)</p>
+        <p><strong>Revenue:</strong> $10,000-$12,000/year</p>
+        <p style="font-size: 1.2em; color: #28a745;"><strong>Net Profit: $9,000-$11,400/year</strong></p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <a href="index.html">← Back to Home</a>
+      <a href="Ginger_Turmeric_Project_Plan.md" target="_blank">📄 Full Text Plan</a>
+      <a href="grant-documents.html">📋 Grant Resources</a>
+    </div>
+  </main>
+
+  <footer>
+    santa puala farm • Pittsboro, North Carolina • 2026
+  </footer>
+</body>
+</html>

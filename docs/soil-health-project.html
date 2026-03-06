@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soil Health & Infrastructure - Project Plan</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%);
+      color: white;
+      padding: 2em;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    header p { font-size: 1.1em; opacity: 0.9; }
+    .breadcrumb {
+      max-width: 900px;
+      margin: 1em auto;
+      padding: 0 1em;
+    }
+    .breadcrumb a { color: #8b4513; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+    .overview {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-left: 5px solid #8b4513;
+    }
+    .overview h2 { color: #8b4513; margin-bottom: 1em; }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+    .overview-item { background: #f5ede4; padding: 1em; border-radius: 4px; }
+    .overview-item strong { display: block; color: #8b4513; font-size: 0.9em; text-transform: uppercase; margin-bottom: 0.3em; }
+    .phase {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .phase h2 {
+      color: white;
+      background: #8b4513;
+      padding: 1em;
+      margin: -2em -2em 1em -2em;
+      border-radius: 8px 8px 0 0;
+      font-size: 1.4em;
+    }
+    .timeline-item {
+      margin: 1.5em 0;
+      padding: 1em;
+      background: #f5ede4;
+      border-left: 4px solid #8b4513;
+      border-radius: 4px;
+    }
+    .timeline-item h3 { color: #8b4513; margin-bottom: 0.5em; font-size: 1.1em; }
+    .timeline-item strong { display: block; color: #6b3410; margin: 0.5em 0; }
+    .task-list {
+      margin: 1em 0;
+      padding-left: 1.5em;
+    }
+    .task-list li { margin: 0.5em 0; }
+    .cost-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .revenue-box {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .csp-box {
+      background: #d1ecf1;
+      border-left: 4px solid #17a2b8;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .success-factors {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-left: 5px solid #28a745;
+    }
+    .success-factors h2 { color: #28a745; margin-bottom: 1em; }
+    .success-factors ol { margin-left: 2em; }
+    .success-factors li { margin: 0.5em 0; }
+    .practice-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1em;
+      margin: 1em 0;
+    }
+    .practice-card {
+      background: white;
+      padding: 1em;
+      border: 2px solid #8b4513;
+      border-radius: 4px;
+    }
+    .practice-card strong { color: #8b4513; }
+    .financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      background: white;
+    }
+    .financial-table th {
+      background: #8b4513;
+      color: white;
+      padding: 1em;
+      text-align: left;
+    }
+    .financial-table td {
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+    }
+    .financial-table tr:hover { background: #f9f9f9; }
+    .button-group {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .button-group a {
+      display: inline-block;
+      padding: 1em 2em;
+      background: #8b4513;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5em;
+      transition: background 0.3s;
+    }
+    .button-group a:hover { background: #6b3410; }
+    footer {
+      background: #8b4513;
+      color: white;
+      text-align: center;
+      padding: 2em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Soil Health & Infrastructure</h1>
+    <p>Foundation Project for Farm Success | Santa Puala Farm</p>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <main>
+    <div class="overview">
+      <h2>Project Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-item">
+          <strong>Scope</strong>
+          Whole-farm foundation
+        </div>
+        <div class="overview-item">
+          <strong>Timeline</strong>
+          Ongoing (Year 1-5+)
+        </div>
+        <div class="overview-item">
+          <strong>Direct Revenue</strong>
+          $400-$600/year CSP
+        </div>
+        <div class="overview-item">
+          <strong>Indirect Value</strong>
+          $1,500-$2,000/year
+        </div>
+      </div>
+      <p style="margin-top: 1em; color: #666; font-size: 0.95em;">Foundation project supporting all other crops. No product revenue but creates conditions for success of greens, ginger, and flowers projects. Generates annual stewardship payments through NRCS CSP program.</p>
+    </div>
+
+    <div class="phase">
+      <h2>📊 Phase 1: Soil Testing & Assessment (January - March 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>January: Comprehensive Soil Baseline</h3>
+        <strong>⏱️ Time: 6-8 hours</strong>
+        <ul class="task-list">
+          <li>Submit soil samples from entire 0.5-acre active area to NC Lab</li>
+          <li>Request: pH, macro/micronutrients, organic matter, texture analysis</li>
+          <li>Walk property and document problem areas (wet spots, compaction, erosion)</li>
+          <li>Map testing results and plan amendments</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Soil Testing Cost:</strong> $30-$60 per sample<br/>
+          Typical for 0.5 acre: 1-2 samples = $30-$60
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>February-March: NRCS Conservation Planning</h3>
+        <strong>⏱️ Time: 6-8 hours</strong>
+        <ul class="task-list">
+          <li>Contact local NRCS office to schedule conservation planner visit</li>
+          <li>On-site consultation covering soil health, erosion, water management</li>
+          <li>Develop conservation plan together (FREE service)</li>
+          <li>Discuss EQIP eligibility and CSP enrollment</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Cost:</strong> FREE (NRCS service)<br/>
+          <strong>Value:</strong> $1,000+ in professional consultation
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🥗 Phase 2: Soil Amendments (February - April 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>Lime Application (If Needed - January)</h3>
+        <strong>⏱️ Time: 4-6 hours</strong>
+        <ul class="task-list">
+          <li>If soil pH < 6.0: Order agricultural lime</li>
+          <li>Typical NC application: 500-1,000 lbs per 0.5 acre</li>
+          <li>Spread lime on beds and water in to activate</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Lime Application:</strong> $50-$100<br/>
+          (Skip if pH already 6.0-6.5)
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Compost & Organic Matter Application</h3>
+        <strong>⏱️ Time: 12-16 hours</strong>
+        <ul class="task-list">
+          <li>Order high-quality compost (50-75 cubic yards for 0.5 acre)</li>
+          <li>Target: 2-3 inches deep on active growing area</li>
+          <li>Spread compost across beds (can do incrementally)</li>
+          <li>Incorporate into top 6-8" of soil in permanent beds</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Compost Cost:</strong> $300-$750 delivered<br/>
+          or $150-$300 if you pick up locally
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🛏️ Phase 3: Permanent Bed System (April - May 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>Bed Layout & Design</h3>
+        <strong>⏱️ Time: 2-3 hours</strong>
+        <ul class="task-list">
+          <li>Standard design: 4-foot beds, 2-foot walkways</li>
+          <li>For 0.5 acre: ~12 beds running 100+ feet</li>
+          <li>Mark out with string and stakes</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Bed Construction Options</h3>
+        <div class="practice-box">
+          <div class="practice-card">
+            <strong>🆓 In-Ground</strong><br/>
+            No frame needed. Permanent, $0 cost
+          </div>
+          <div class="practice-card">
+            <strong>💪 Wood Frame</strong><br/>
+            4"×8'×100' beds. $200-$400 total
+          </div>
+          <div class="practice-card">
+            <strong>⭐ Metal Composite</strong><br/>
+            Professional look. $600-$1,200 total
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Permanent Walkways</h3>
+        <strong>⏱️ Time: 6-8 hours</strong>
+        <ul class="task-list">
+          <li>Lay cardboard or landscape fabric on walkway areas</li>
+          <li>Cover with wood chips or straw to prevent mud and weeds</li>
+          <li>Benefits: Saves water, reduces weeds, no foot traffic on beds</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Walkway Materials:</strong> $100-$200
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>💧 Phase 4: Irrigation & Water Management (May - October 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>Main Water Infrastructure</h3>
+        <strong>⏱️ Time: 8-10 hours</strong>
+        <ul class="task-list">
+          <li>Install main water line from source to field</li>
+          <li>Create central manifold with splitter valves</li>
+          <li>Simplifies management and reduces water waste</li>
+          <li>Coordinate with greens, ginger, and flower projects</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Main Infrastructure:</strong> $200-$400
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Drip Line Installation</h3>
+        <strong>⏱️ Time: 8-10 hours</strong>
+        <ul class="task-list">
+          <li>Run drip tape down each bed</li>
+          <li>Connect to main lines with flow control</li>
+          <li>Install timers if using electric pump (optional)</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Drip Lines & Timers:</strong> $400-$800<br/>
+          (Likely covered under EQIP irrigation cost-share)
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Water Management Assessment</h3>
+        <strong>⏱️ Time: 4-6 hours</strong>
+        <ul class="task-list">
+          <li>Document wet areas after rain (standing water > 4 hours)</li>
+          <li>Assess soil texture (clay, sandy, loam)</li>
+          <li>Plan improvements (raised beds, French drains, swales)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🌿 Phase 5: Cover Crop Rotation (Ongoing)</h2>
+
+      <div class="timeline-item">
+        <h3>Spring 2026: Warm-Season Cover Crop</h3>
+        <strong>⏱️ Time: 4-6 hours per rotation</strong>
+        <ul class="task-list">
+          <li>Allocate 30-40% of beds to cover crops</li>
+          <li>Warm-season mix: Buckwheat (4 weeks) + cowpeas + millet</li>
+          <li>Direct seed in vacant beds, let grow 8-10 weeks</li>
+          <li>Benefits: Fast nitrogen-building, erosion control</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Seed Cost:</strong> $50-$100 per rotation
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Fall 2026: Cool-Season Cover Crop</h3>
+        <strong>⏱️ Time: 4-6 hours</strong>
+        <ul class="task-list">
+          <li>Cool-season mix: Winter rye (rust) + hairy vetch + clover</li>
+          <li>Plant September-October, mow down March-April</li>
+          <li>Benefits: Winter soil protection, nitrogen fixation, weed suppression</li>
+          <li>Rotate beds annually (don't repeat same crop/location)</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Seed Cost:</strong> $50-$100 per rotation<br/>
+          <strong>💰 Estimated Savings:</strong> $200-$400/year on nitrogen fertilizer
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🐝 Phase 6: Pollinator Habitat (May - October 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>Design & Site Prep</h3>
+        <strong>⏱️ Time: 8-10 hours</strong>
+        <ul class="task-list">
+          <li>Identify 0.10 acre area for native plants (edge of field, perimeter)</li>
+          <li>Remove sod, loosen soil</li>
+          <li>Order NC native wildflower seed mix</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Native Plant Recommendations</h3>
+        <div class="practice-box">
+          <div class="practice-card">
+            <strong>🌼 Black-Eyed Susan</strong><br/>
+            Summer blooms, attracts bees
+          </div>
+          <div class="practice-card">
+            <strong>🦋 Milkweed</strong><br/>
+            Monarch butterfly host plant
+          </div>
+          <div class="practice-card">
+            <strong>💜 Purple Coneflower</strong><br/>
+            Late summer nectar source
+          </div>
+          <div class="practice-card">
+            <strong>🌸 Coreopsis</strong><br/>
+            Long bloom season, low maintenance
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Planting & Establishment</h3>
+        <strong>⏱️ Time: 6-8 hours + ongoing maintenance</strong>
+        <ul class="task-list">
+          <li>Direct seed or transplant native plants in June</li>
+          <li>Water consistently for first month until established</li>
+          <li>Minimal maintenance: Remove invasive weeds in Year 1 only</li>
+          <li>Leave spent flowers/stems through winter for overwintering insects</li>
+        </ul>
+        <div class="cost-box">
+          <strong>💰 Pollinator Habitat:</strong> $100-$200 for seed/plants
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>🏛️ Phase 7: NRCS CSP Enrollment (August - October 2026)</h2>
+
+      <div class="timeline-item">
+        <h3>Pre-Screening & Application Prep</h3>
+        <strong>⏱️ Time: 6-8 hours</strong>
+        <ul class="task-list">
+          <li>Contact NRCS to request CSP pre-screening</li>
+          <li>List conservation practices you'll implement (beds, cover crops, native habitat)</li>
+          <li>Gather supporting documentation</li>
+          <li>Take baseline photos of current conditions</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>CSP Enrollment Benefits</h3>
+        <div class="csp-box">
+          <strong>💰 Annual Payment:</strong> $400-$600/year<br/>
+          <strong>📋 Duration:</strong> 5-year contract (renewable)<br/>
+          <strong>💵 Total Benefit:</strong> $2,000-$3,000 over 5 years<br/>
+          <strong>✅ Eligibility:</strong> You're automatically eligible with soil health practices
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Eligible Practices</h3>
+        <div class="practice-box">
+          <div class="practice-card">
+            <strong>🛏️ Permanent Beds</strong><br/>
+            Reduces erosion & compaction
+          </div>
+          <div class="practice-card">
+            <strong>🌾 Cover Crops</strong><br/>
+            Soil health & nitrogen fixation
+          </div>
+          <div class="practice-card">
+            <strong>🐝 Native Habitat</strong><br/>
+            Wildlife benefit & pollination
+          </div>
+          <div class="practice-card">
+            <strong>💧 Irrigation</strong><br/>
+            Water conservation & efficiency
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="success-factors">
+      <h2>✨ Long-Term Soil Building Goals</h2>
+      <p style="margin-bottom: 1em;"><strong>Year 1 Targets:</strong> pH optimal, organic matter increase to 3-4%, permanent beds established</p>
+      <p style="margin-bottom: 1em;"><strong>Year 2-3 Targets:</strong> Organic matter 4-5%, visible earthworms, soil structure improvement, water infiltration 1+ inch/hour</p>
+      <p style="margin-bottom: 1em;"><strong>Year 5+ Vision:</strong> Organic matter 5-6%, thriving pollinator population, zero synthetic fertilizer needed, superior water-holding capacity, drought resilience</p>
+    </div>
+
+    <div class="phase">
+      <h2>💰 Financial Summary</h2>
+
+      <h3 style="color: #8b4513; margin-top: 1.5em;">Year 1 Investment (2026)</h3>
+      <table class="financial-table" style="margin-bottom: 2em;">
+        <tbody>
+          <tr>
+            <td>Soil testing</td>
+            <td style="text-align: right;">$30-$60</td>
+          </tr>
+          <tr>
+            <td>Lime (if needed)</td>
+            <td style="text-align: right;">$50-$100</td>
+          </tr>
+          <tr>
+            <td>Compost</td>
+            <td style="text-align: right;">$300-$750</td>
+          </tr>
+          <tr>
+            <td>Bed system materials</td>
+            <td style="text-align: right;">$200-$400</td>
+          </tr>
+          <tr>
+            <td>Walkway mulch</td>
+            <td style="text-align: right;">$100-$200</td>
+          </tr>
+          <tr>
+            <td>Cover crop seeds</td>
+            <td style="text-align: right;">$100-$200</td>
+          </tr>
+          <tr>
+            <td>Pollinator habitat</td>
+            <td style="text-align: right;">$100-$200</td>
+          </tr>
+          <tr>
+            <td>Irrigation infrastructure</td>
+            <td style="text-align: right;">$700-$1,400</td>
+          </tr>
+          <tr style="background: #f0f0f0; font-weight: bold;">
+            <td>Total Before EQIP</td>
+            <td style="text-align: right;">$1,580-$3,910</td>
+          </tr>
+          <tr style="background: #e8f5e9;">
+            <td>EQIP reimbursement</td>
+            <td style="text-align: right;">-$700 to -$1,400</td>
+          </tr>
+          <tr style="background: #f0f0f0; font-weight: bold;">
+            <td>Net Out-of-Pocket</td>
+            <td style="text-align: right;">$880-$2,510</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #8b4513;">Year 2+ (Annual Maintenance)</h3>
+      <div class="cost-box">
+        <p><strong>Annual Costs:</strong> $200-$400</p>
+        <p>(Cover crop seeds, soil amendments, monitoring)</p>
+      </div>
+
+      <h3 style="color: #8b4513; margin-top: 1.5em;">CSP Payments (Year 2 onwards)</h3>
+      <div class="csp-box" style="padding: 1.5em;">
+        <p><strong>Year 2-5:</strong> $400-$600/year</p>
+        <p style="margin-top: 0.5em;"><strong>Total CSP benefit over 5 years:</strong> $2,000-$3,000</p>
+        <p style="margin-top: 0.5em; font-size: 1.1em; color: #17a2b8;"><strong>Net Effect:</strong> Annual costs nearly offset by CSP payments</strong></p>
+      </div>
+
+      <h3 style="color: #8b4513; margin-top: 1.5em;">Indirect Value</h3>
+      <div class="revenue-box" style="padding: 1.5em;">
+        <p><strong>Estimated annual value through improved crop yields:</strong> $1,500-$2,000</p>
+        <p style="margin-top: 0.5em;">Healthy soil = Higher productivity, better water retention, fewer pest problems, reduced input costs</p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>📝 Record Keeping</h2>
+
+      <div class="timeline-item">
+        <h3>Track Annually</h3>
+        <ul class="task-list">
+          <li>Soil test results (N, P, K, pH, organic matter every 2-3 years)</li>
+          <li>Compost/amendment applications (date, amount, cost)</li>
+          <li>Cover crop types and termination dates</li>
+          <li>Pest/disease observations</li>
+          <li>Pollinator sightings (photographs, species notes)</li>
+          <li>CSP practice maintenance (photos, dates)</li>
+        </ul>
+        <p style="margin-top: 1em; color: #666; font-size: 0.9em;">Use Farm_Forms_Pack.md templates for consistent record keeping</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <a href="index.html">← Back to Home</a>
+      <a href="Soil_Health_Infrastructure_Project_Plan.md" target="_blank">📄 Full Text Plan</a>
+      <a href="grant-documents.html">📋 Grant Resources</a>
+    </div>
+  </main>
+
+  <footer>
+    santa puala farm • Pittsboro, North Carolina • 2026
+  </footer>
+</body>
+</html>
