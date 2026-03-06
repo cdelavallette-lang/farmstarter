@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Project Planner - Santa Puala Farm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2em;
+            background: white;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #2c5f2d;
+            margin-bottom: 0.5em;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-section, .preview-section {
+            background: white;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-section h2, .preview-section h2 {
+            color: #2c5f2d;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            color: #2c5f2d;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 0.25em;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 1em;
+            margin-top: 0.5em;
+        }
+
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: #333;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .phase-inputs {
+            border: 2px dashed #ddd;
+            padding: 1em;
+            border-radius: 8px;
+            margin-top: 1em;
+        }
+
+        .phase-item {
+            background: #f9f9f9;
+            padding: 1em;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .phase-item input {
+            margin-bottom: 0.5em;
+        }
+
+        .add-phase-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75em 1.5em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .add-phase-btn:hover {
+            background: #45a049;
+        }
+
+        .preview-section {
+            position: sticky;
+            top: 2em;
+            max-height: calc(100vh - 4em);
+            overflow-y: auto;
+        }
+
+        #preview-content {
+            min-height: 400px;
+        }
+
+        .preview-banner {
+            padding: 3em 2em;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .preview-banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .preview-card {
+            background: #f9f9f9;
+            padding: 1.5em;
+            border-radius: 10px;
+            margin-bottom: 1.5em;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .preview-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 0.5em;
+        }
+
+        .financial-table {
+            width: 100%;
+            margin-top: 1em;
+            border-collapse: collapse;
+        }
+
+        .financial-table th,
+        .financial-table td {
+            padding: 0.75em;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .financial-table th {
+            background: #f0f0f0;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1em;
+            margin-top: 2em;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1em 2em;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-secondary {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0b7dda;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            color: #2c5f2d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1em;
+            border-radius: 8px;
+            margin-top: 1em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="header">
+            <h1>🌱 New Project Planner</h1>
+            <p>Fill in the details below and watch your project plan come to life instantly!</p>
+        </div>
+
+        <div class="main-layout">
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Project Details</h2>
+                
+                <div class="form-group">
+                    <label>Project Name *</label>
+                    <input type="text" id="projectName" placeholder="e.g., Salad Greens & Herbs">
+                    <small>What crop or system are you planning?</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Subtitle / Description</label>
+                    <input type="text" id="subtitle" placeholder="e.g., Weekly Harvests for Farmers Markets & Restaurants">
+                    <small>A catchy one-liner about the project</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Color Theme *</label>
+                    <div class="color-picker">
+                        <div class="color-option selected" data-color="#2e7d32" style="background: #2e7d32;" title="Green"></div>
+                        <div class="color-option" data-color="#f57c00" style="background: #f57c00;" title="Orange"></div>
+                        <div class="color-option" data-color="#c2185b" style="background: #c2185b;" title="Pink"></div>
+                        <div class="color-option" data-color="#5d4037" style="background: #5d4037;" title="Brown"></div>
+                        <div class="color-option" data-color="#1976d2" style="background: #1976d2;" title="Blue"></div>
+                        <div class="color-option" data-color="#7b1fa2" style="background: #7b1fa2;" title="Purple"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Area Size</label>
+                    <input type="text" id="areaSize" placeholder="e.g., 0.20 acre (8,700 sq ft)">
+                </div>
+
+                <div class="form-group">
+                    <label>Project Goals</label>
+                    <textarea id="goals" placeholder="What do you want to achieve with this project? (one goal per line)"></textarea>
+                    <small>Enter each goal on a new line</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Initial Investment</label>
+                    <input type="text" id="initialCost" placeholder="e.g., $3,200 (before grants)">
+                </div>
+
+                <div class="form-group">
+                    <label>Grant Coverage</label>
+                    <input type="text" id="grantCoverage" placeholder="e.g., $1,500-$2,500 from EQIP">
+                </div>
+
+                <div class="form-group">
+                    <label>Year 1 Revenue</label>
+                    <input type="text" id="year1Revenue" placeholder="e.g., $12,000-$15,000">
+                </div>
+
+                <div class="form-group">
+                    <label>Year 2+ Revenue</label>
+                    <input type="text" id="year2Revenue" placeholder="e.g., $18,000-$22,000">
+                </div>
+
+                <div class="form-group">
+                    <label>Grant Opportunities</label>
+                    <textarea id="grants" placeholder="List relevant grants (one per line)&#10;e.g., NRCS EQIP - Irrigation&#10;NC AgVentures - Infrastructure"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Timeline Phases</label>
+                    <small>Add the major phases of your project</small>
+                    <div class="phase-inputs" id="phaseInputs">
+                        <!-- Phases will be added here dynamically -->
+                    </div>
+                    <button type="button" class="add-phase-btn" onclick="addPhase()">+ Add Phase</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Key Dates & Deadlines</label>
+                    <textarea id="keyDates" placeholder="Important dates (one per line)&#10;e.g., March 15: EQIP application deadline&#10;May 1: First planting"></textarea>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="copyHTML()">📋 Copy HTML Code</button>
+                    <button class="btn btn-secondary" onclick="downloadHTML()">💾 Download HTML File</button>
+                </div>
+                <div class="success-message" id="successMessage">HTML copied to clipboard!</div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <h2>Live Preview</h2>
+                <div id="preview-content">
+                    <div style="text-align: center; color: #999; padding: 3em;">
+                        <p>👆 Start filling in the form to see your project plan appear here!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedColor = '#2e7d32';
+        let phases = [];
+
+        // Color picker functionality
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedColor = this.dataset.color;
+                updatePreview();
+            });
+        });
+
+        // Add initial phase
+        addPhase();
+
+        // Add event listeners to all inputs
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('input', updatePreview);
+        });
+
+        function addPhase() {
+            const phaseId = Date.now();
+            const phaseDiv = document.createElement('div');
+            phaseDiv.className = 'phase-item';
+            phaseDiv.innerHTML = `
+                <input type="text" placeholder="Phase name (e.g., Planning & Setup)" data-phase-id="${phaseId}" data-field="name">
+                <textarea placeholder="Phase description and tasks" data-phase-id="${phaseId}" data-field="description" style="margin-top: 0.5em;"></textarea>
+            `;
+            document.getElementById('phaseInputs').appendChild(phaseDiv);
+
+            // Add event listeners to new inputs
+            phaseDiv.querySelectorAll('input, textarea').forEach(element => {
+                element.addEventListener('input', function() {
+                    updatePhaseData(phaseId, this.dataset.field, this.value);
+                    updatePreview();
+                });
+            });
+
+            phases.push({ id: phaseId, name: '', description: '' });
+        }
+
+        function updatePhaseData(phaseId, field, value) {
+            const phase = phases.find(p => p.id === phaseId);
+            if (phase) {
+                phase[field] = value;
+            }
+        }
+
+        function updatePreview() {
+            const projectName = document.getElementById('projectName').value || 'Your Project Name';
+            const subtitle = document.getElementById('subtitle').value || 'Project Description';
+            const areaSize = document.getElementById('areaSize').value;
+            const goals = document.getElementById('goals').value;
+            const initialCost = document.getElementById('initialCost').value;
+            const grantCoverage = document.getElementById('grantCoverage').value;
+            const year1Revenue = document.getElementById('year1Revenue').value;
+            const year2Revenue = document.getElementById('year2Revenue').value;
+            const grants = document.getElementById('grants').value;
+            const keyDates = document.getElementById('keyDates').value;
+
+            let html = `
+                <div class="preview-banner" style="background: linear-gradient(135deg, ${selectedColor} 0%, ${adjustBrightness(selectedColor, -30)} 100%);">
+                    <h1>${escapeHtml(projectName)}</h1>
+                    <p style="font-size: 1.2em;">${escapeHtml(subtitle)}</p>
+                    ${areaSize ? `<p style="margin-top: 0.5em; font-size: 1.1em;">📍 ${escapeHtml(areaSize)}</p>` : ''}
+                </div>
+            `;
+
+            if (goals) {
+                html += `
+                    <div class="preview-card">
+                        <h3>🎯 Project Goals</h3>
+                        <ul style="margin-left: 1.5em; margin-top: 0.5em;">
+                            ${goals.split('\n').filter(g => g.trim()).map(goal => `<li>${escapeHtml(goal)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            if (initialCost || grantCoverage) {
+                html += `
+                    <div class="preview-card">
+                        <h3>💰 Investment Overview</h3>
+                        ${initialCost ? `<p><strong>Initial Investment:</strong> ${escapeHtml(initialCost)}</p>` : ''}
+                        ${grantCoverage ? `<p><strong>Grant Coverage:</strong> ${escapeHtml(grantCoverage)}</p>` : ''}
+                    </div>
+                `;
+            }
+
+            if (year1Revenue || year2Revenue) {
+                html += `
+                    <div class="preview-card">
+                        <h3>📈 Revenue Projections</h3>
+                        <table class="financial-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${year1Revenue ? `<tr><td>Year 1</td><td>${escapeHtml(year1Revenue)}</td></tr>` : ''}
+                                ${year2Revenue ? `<tr><td>Year 2+</td><td>${escapeHtml(year2Revenue)}</td></tr>` : ''}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+
+            if (phases.some(p => p.name)) {
+                html += `
+                    <div class="preview-card">
+                        <h3>📅 Timeline & Phases</h3>
+                `;
+                phases.filter(p => p.name).forEach((phase, index) => {
+                    html += `
+                        <div style="margin-top: 1em;">
+                            <h4 style="color: ${selectedColor}; margin-bottom: 0.5em;">Phase ${index + 1}: ${escapeHtml(phase.name)}</h4>
+                            <p style="white-space: pre-line;">${escapeHtml(phase.description)}</p>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+
+            if (keyDates) {
+                html += `
+                    <div class="preview-card">
+                        <h3>📌 Key Dates & Deadlines</h3>
+                        <ul style="margin-left: 1.5em; margin-top: 0.5em;">
+                            ${keyDates.split('\n').filter(d => d.trim()).map(date => `<li>${escapeHtml(date)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            if (grants) {
+                html += `
+                    <div class="preview-card">
+                        <h3>🎁 Grant Opportunities</h3>
+                        <ul style="margin-left: 1.5em; margin-top: 0.5em;">
+                            ${grants.split('\n').filter(g => g.trim()).map(grant => `<li>${escapeHtml(grant)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            document.getElementById('preview-content').innerHTML = html;
+        }
+
+        function generateFullHTML() {
+            const projectName = document.getElementById('projectName').value || 'Your Project Name';
+            const previewContent = document.getElementById('preview-content').innerHTML;
+
+            return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(projectName)} - Santa Puala Farm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            color: #2c5f2d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .preview-banner {
+            padding: 3em 2em;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            margin-bottom: 2em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .preview-banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .preview-card {
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            margin-bottom: 1.5em;
+            border-left: 5px solid ${selectedColor};
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .preview-card h3 {
+            color: ${selectedColor};
+            margin-bottom: 1em;
+            font-size: 1.5em;
+        }
+        .financial-table {
+            width: 100%;
+            margin-top: 1em;
+            border-collapse: collapse;
+        }
+        .financial-table th,
+        .financial-table td {
+            padding: 0.75em;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .financial-table th {
+            background: #f0f0f0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        ${previewContent}
+    </div>
+</body>
+</html>`;
+        }
+
+        function copyHTML() {
+            const html = generateFullHTML();
+            navigator.clipboard.writeText(html).then(() => {
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 3000);
+            });
+        }
+
+        function downloadHTML() {
+            const html = generateFullHTML();
+            const projectName = document.getElementById('projectName').value || 'project';
+            const filename = projectName.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-plan.html';
+            
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function adjustBrightness(color, amount) {
+            const num = parseInt(color.replace('#', ''), 16);
+            const r = Math.max(0, Math.min(255, (num >> 16) + amount));
+            const g = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amount));
+            const b = Math.max(0, Math.min(255, (num & 0x0000FF) + amount));
+            return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+        }
+    </script>
+</body>
+</html>
