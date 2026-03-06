@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finding & Landing Buyers - Complete Guide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(135deg, #2f6b3f 0%, #1e4d2b 100%);
+      color: white;
+      padding: 2em;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    .breadcrumb {
+      max-width: 1000px;
+      margin: 1em auto;
+      padding: 0 1em;
+    }
+    .breadcrumb a { color: #2f6b3f; text-decoration: none; }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+    .section {
+      background: white;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #2f6b3f;
+      margin-bottom: 1em;
+      border-bottom: 3px solid #2f6b3f;
+      padding-bottom: 0.5em;
+    }
+    .buyer-type {
+      background: #f0f8f4;
+      border-left: 5px solid #2f6b3f;
+      padding: 1.5em;
+      margin: 1.5em 0;
+      border-radius: 4px;
+    }
+    .buyer-type h3 {
+      color: #2f6b3f;
+      margin-bottom: 0.5em;
+      font-size: 1.2em;
+    }
+    .buyer-type-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      margin-top: 1em;
+    }
+    .buyer-detail {
+      background: white;
+      padding: 1em;
+      border-radius: 4px;
+    }
+    .buyer-detail strong { color: #2f6b3f; display: block; margin-bottom: 0.3em; }
+    .buyer-list {
+      background: white;
+      border: 2px solid #2f6b3f;
+      padding: 1.5em;
+      margin: 1.5em 0;
+      border-radius: 4px;
+    }
+    .buyer-list h4 { color: #2f6b3f; margin-bottom: 1em; }
+    .buyer-item {
+      padding: 1em;
+      margin: 0.5em 0;
+      background: #f9f9f9;
+      border-left: 3px solid #d4a017;
+      border-radius: 3px;
+    }
+    .buyer-item strong { color: #1e4d2b; }
+    .buyer-item a { color: #2f6b3f; text-decoration: none; }
+    .buyer-item a:hover { text-decoration: underline; }
+    .checklist {
+      background: #e8f5e9;
+      border-left: 5px solid #28a745;
+      padding: 1.5em;
+      margin: 1.5em 0;
+      border-radius: 4px;
+    }
+    .checklist h3 { color: #28a745; margin-bottom: 1em; }
+    .checklist ol { margin-left: 2em; }
+    .checklist li { margin: 0.5em 0; }
+    .email-template {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 1.5em;
+      margin: 1.5em 0;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+    .email-subject {
+      color: #2f6b3f;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    .tip-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .success-box {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    .warning-box {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      background: white;
+    }
+    th {
+      background: #2f6b3f;
+      color: white;
+      padding: 1em;
+      text-align: left;
+    }
+    td {
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+    }
+    tr:hover { background: #f9f9f9; }
+    .button-group {
+      text-align: center;
+      margin: 2em 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 1em 2em;
+      background: #2f6b3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5em;
+      transition: background 0.3s;
+    }
+    .button:hover { background: #1e4d2b; }
+    footer {
+      background: #2f6b3f;
+      color: white;
+      text-align: center;
+      padding: 2em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎯 Finding & Landing Buyers</h1>
+    <p>The Complete Buyer-Finding Guide for Santa Puala Farm</p>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <main>
+    <div class="section">
+      <h2>Why Finding Buyers is Hard (And How to Fix It)</h2>
+      <p>Most farmers struggle with buyer outreach because they approach it backwards: they grow the crop, THEN try to find someone to buy it. The real strategy is to find buyers FIRST, understand what they need, and then grow specifically for them.</p>
+      <div class="success-box">
+        <strong>✅ The Winning Strategy:</strong> Line up 3-5 committed buyers before you even plant. They're excited, you're profitable, and you sleep better at night.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🎯 The 5 Main Buyer Types (Ranked by Ease & Profit)</h2>
+
+      <div class="buyer-type">
+        <h3>1️⃣ Farmers Markets (EASIEST START)</h3>
+        <div class="buyer-type-content">
+          <div class="buyer-detail">
+            <strong>Why This Works:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Direct to consumer (no middleman)</li>
+              <li>Higher prices (retail, not wholesale)</li>
+              <li>Weekly commitment</li>
+              <li>Build loyal customers</li>
+            </ul>
+          </div>
+          <div class="buyer-detail">
+            <strong>How to Get In:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Contact market manager March-April</li>
+              <li>Pay booth fee ($20-$50/week)</li>
+              <li>Bring samples of your products</li>
+              <li>Commit to weekly attendance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Pro Tip:</strong> Markets are CHEAP to test (one booth = $50-100/week) but they require your time. Great if you enjoy talking to customers, but time-intensive.
+        </div>
+      </div>
+
+      <div class="buyer-type">
+        <h3>2️⃣ Restaurants & Chefs (HIGH PRICE, RELIABLE)</h3>
+        <div class="buyer-type-content">
+          <div class="buyer-detail">
+            <strong>Why This Works:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Pay 60-70% of retail price (still good)</li>
+              <li>Weekly standing orders</li>
+              <li>Professional relationship</li>
+              <li>Larger volumes = easier business</li>
+            </ul>
+          </div>
+          <div class="buyer-detail">
+            <strong>How to Get In:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Target upscale restaurants</li>
+              <li>Email chef/executive + sample</li>
+              <li>Follow up with phone call</li>
+              <li>Deliver samples personally</li>
+            </ul>
+          </div>
+        </div>
+        <div class="success-box">
+          <strong>✅ The Pitch:</strong> "We grow regenerative produce minutes from your kitchen. Can I drop off samples this Friday?"
+        </div>
+      </div>
+
+      <div class="buyer-type">
+        <h3>3️⃣ Farm Stands & Cooperatives (STEADY WHOLESALE)</h3>
+        <div class="buyer-type-content">
+          <div class="buyer-detail">
+            <strong>Why This Works:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Already buy local produce</li>
+              <li>Happy to add new suppliers</li>
+              <li>Wholesale pricing (50-60%)</li>
+              <li>Weekly or bi-weekly orders</li>
+            </ul>
+          </div>
+          <div class="buyer-detail">
+            <strong>How to Get In:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Visit in person with samples</li>
+              <li>Talk to produce manager</li>
+              <li>Ask about vendor requirements</li>
+              <li>Submit wholesale pricing sheet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="buyer-type">
+        <h3>4️⃣ CSA (Community Supported Agriculture) - JOIN EXISTING</h3>
+        <div class="buyer-type-content">
+          <div class="buyer-detail">
+            <strong>Why This Works:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>CSAs constantly need local suppliers</li>
+              <li>Add-on items (not core crop)</li>
+              <li>Retail pricing (70-80%)</li>
+              <li>Predictable weekly orders</li>
+            </ul>
+          </div>
+          <div class="buyer-detail">
+            <strong>How to Get In:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Email CSA manager with availability</li>
+              <li>Emphasize specialty items (ginger, herbs)</li>
+              <li>Offer samples to members</li>
+              <li>Be flexible on sizes/quantities</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Example:</strong> A CSA with 100 members would pay $300-500/week for fresh herbs and specialty items. That's $1,200-2,000/month for minimal effort.
+        </div>
+      </div>
+
+      <div class="buyer-type">
+        <h3>5️⃣ Specialty Grocers & Co-ops (WHOLESALE, PROFESSIONAL)</h3>
+        <div class="buyer-type-content">
+          <div class="buyer-detail">
+            <strong>Why This Works:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Higher volumes (200-500 lbs/week)</li>
+              <li>Professional purchasing process</li>
+              <li>Regular delivery schedule</li>
+              <li>Stable wholesale pricing</li>
+            </ul>
+          </div>
+          <div class="buyer-detail">
+            <strong>How to Get In:</strong>
+            <ul style="margin-left: 1em; margin-top: 0.5em;">
+              <li>Call produce manager</li>
+              <li>Submit vendor application</li>
+              <li>Provide insurance/food safety docs</li>
+              <li>Meet labeling/packaging standards</li>
+            </ul>
+          </div>
+        </div>
+        <div class="warning-box">
+          <strong>⚠️ Reality Check:</strong> Larger stores have strict requirements (insurance, food safety certifications, consistent volume). Start here only after proving yourself with restaurants/farmers markets.
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📍 Specific Buyers in Chatham County & Triangle Area</h2>
+
+      <div class="buyer-list">
+        <h4>🌾 FARMERS MARKETS (Easiest Entry Point)</h4>
+        <div class="buyer-item">
+          <strong>Pittsboro Farmers Market</strong><br/>
+          📍 Pittsboro Commons (your backyard!)<br/>
+          📅 Year-round, Saturday mornings<br/>
+          📞 Contact: <a href="https://www.pittsboronc.gov/parks-recreation/farmers-market" target="_blank">pittsboronc.gov</a><br/>
+          💵 Booth fee: ~$30-40/week<br/>
+          <strong>Action:</strong> Call town or visit in-person with samples
+        </div>
+        <div class="buyer-item">
+          <strong>Durham Farmers Market</strong><br/>
+          📍 Durham Central Park<br/>
+          📅 Year-round, Saturday mornings<br/>
+          💵 Booth fee: ~$40-50/week<br/>
+          👥 Larger, higher traffic than Pittsboro<br/>
+          <strong>Action:</strong> Contact manager via website
+        </div>
+        <div class="buyer-item">
+          <strong>Chapel Hill Farmers Market</strong><br/>
+          📍 Weaver Street Market<br/>
+          📅 Year-round, Wednesday + Saturday<br/>
+          💵 Booth fee: ~$45-60/week<br/>
+          👥 Most upscale, best prices<br/>
+          <strong>Action:</strong> Contact market coordinator
+        </div>
+      </div>
+
+      <div class="buyer-list">
+        <h4>🍽️ RESTAURANTS (Higher Prices)</h4>
+        <div class="buyer-item">
+          <strong>Puckett's Cafe & Provisions (Pittsboro)</strong><br/>
+          🌟 LOCAL, uses local producers<br/>
+          📧 Contact: Produce manager or chef<br/>
+          💡 Strategy: Walk in with business card + sample of herbs/greens
+        </div>
+        <div class="buyer-item">
+          <strong>Chapel Hill:</strong> Lantern, The Cupboard, Scratch Hall<br/>
+          🌟 High-end restaurants, actively buy local<br/>
+          💡 Strategy: Email chef + LinkedIn connection + phone follow-up
+        </div>
+        <div class="buyer-item">
+          <strong>Durham:</strong> Pizzeria Bianco, Pompieri, Four Square<br/>
+          🌟 Farm-to-table oriented<br/>
+          💡 Strategy: Same as above
+        </div>
+      </div>
+
+      <div class="buyer-list">
+        <h4>🥬 GROCERS & CO-OPS (Wholesale)</h4>
+        <div class="buyer-item">
+          <strong>Whole Foods Market (Chapel Hill & Durham)</strong><br/>
+          📍 Multiple locations<br/>
+          ⚠️ HARD to get into (requires insurance, certifications)<br/>
+          💡 Start here AFTER proving yourself elsewhere<br/>
+          <strong>Contact:</strong> Produce manager via store phone
+        </div>
+        <div class="buyer-item">
+          <strong>Chatham Marketplace (Pittsboro)</strong><br/>
+          📍 Pittsboro Commons<br/>
+          🌟 LOCAL-focused, friendly<br/>
+          💵 Wholesale 50-60%<br/>
+          <strong>Action:</strong> Walk in, ask for produce manager, show samples
+        </div>
+        <div class="buyer-item">
+          <strong>Durham Food Co-Op</strong><br/>
+          📍 Durham<br/>
+          🌟 Member-owned, supports local<br/>
+          💡 Contact produce buyer via website<br/>
+          <strong>Action:</strong> Email first, follow-up call
+        </div>
+      </div>
+
+      <div class="buyer-list">
+        <h4>📦 CSA PROGRAMS (Easy Add-On)</h4>
+        <div class="buyer-item">
+          <strong>Local Harvest CSA (Various locations)</strong><br/>
+          🌟 Large network needing local suppliers<br/>
+          💡 Email: looking for spring/summer add-ons (your greens, herbs, flowers)<br/>
+          <strong>Action:</strong> Search "CSA near Pittsboro NC" online, contact directly
+        </div>
+        <div class="buyer-item">
+          <strong>Farm-to-Consumer Direct (Multiple CSAs)</strong><br/>
+          💡 Many CSAs run in Chapel Hill, Durham, Raleigh<br/>
+          💰 Average CSA pays $300-500/week for supplier items<br/>
+          <strong>Action:</strong> Google "CSA [city name] NC" + contact managers
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📋 Your Buyer-Finding Action Plan</h2>
+
+      <div class="checklist">
+        <h3>Week 1: Research & List Building</h3>
+        <ol>
+          <li>Go online: Search "farmers markets near Pittsboro NC" - write down 5 markets</li>
+          <li>Google "restaurants near Pittsboro NC" + "farm to table" - list 10 options</li>
+          <li>Search "CSA near Pittsboro" + "co-ops Chapel Hill" - list 5 CSAs + 3 co-ops</li>
+          <li>Call Pittsboro Farmers Market manager - ask about booth availability and fees</li>
+          <li>Save contact info for 15 potential buyers in a spreadsheet</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 2: Prepare Materials</h3>
+        <ol>
+          <li>Create simple 1-page "sell sheet" (what you grow, when, prices, contact)</li>
+          <li>Take professional photos of your best products</li>
+          <li>Write short email template for restaurants (see below)</li>
+          <li>Create simple inventory/availability sheet you can email weekly</li>
+          <li>Print 50 business cards with farm name + your phone/email</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 3: Farmers Market Application</h3>
+        <ol>
+          <li>Visit Pittsboro Farmers Market on Saturday morning</li>
+          <li>Talk to market manager - ask about booth availability</li>
+          <li>Apply for a booth (1-2 booths to start)</li>
+          <li>Pay booth fee for first 4-8 weeks</li>
+          <li>Mark calendar: You'll sell first produce April-May 2026</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 4: Restaurant Cold Outreach</h3>
+        <ol>
+          <li>Email 5 upscale restaurants in Chapel Hill/Durham (see template below)</li>
+          <li>Include: Your farm name, photo, what you grow, availability</li>
+          <li>Ask for 15-minute phone call to discuss</li>
+          <li>Wait 3-4 days, if no response, call the restaurant directly</li>
+          <li>Target: Get 1-2 restaurant meetings lined up</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 5: CSA + Co-Op Outreach</h3>
+        <ol>
+          <li>Email 5 local CSAs offering specialty items (herbs, greens, flowers)</li>
+          <li>Emphasize: "Local, regenerative, available weekly"</li>
+          <li>Contact 2-3 grocery stores/co-ops (easier ones first - Chatham Marketplace)</li>
+          <li>Target: At least 1 CSA saying "maybe" and 1 grocery store meeting</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <h3>Ongoing (Monthly)</h3>
+        <ol>
+          <li>Send weekly availability email to all committed buyers (every Sunday)</li>
+          <li>Confirm next week's delivery/pickup schedule</li>
+          <li>Ask for feedback: "What worked? What do you need more of?"</li>
+          <li>Add 1-2 new potential buyers each month</li>
+          <li>Track what sells (sales + feedback = next season's focus)</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📧 Email Templates (Copy & Paste Ready)</h2>
+
+      <h3>Template 1: Restaurant Chef Outreach</h3>
+      <div class="email-template">
+        <div class="email-subject">Subject: Local Regenerative Produce - Weekly Availability</div>
+        <br/>
+        Hello [Chef Name / Executive Chef],<br/>
+        <br/>
+        I operate santa puala farm, a small regenerative operation in Pittsboro growing specialty produce for local chefs and restaurants.<br/>
+        <br/>
+        This season we have weekly availability of:<br/>
+        • Salad greens & microgreens (lettuces, arugula, mixed)<br/>
+        • Fresh culinary herbs (basil, cilantro, parsley, mint)<br/>
+        • Specialty crops: ginger, turmeric (fall harvest)<br/>
+        • Cut flowers (seasonal)<br/>
+        <br/>
+        I'd love to discuss how we might supply your kitchen. Would you be open to tasting samples of our spring greens this Friday or next week?<br/>
+        <br/>
+        Looking forward to connecting,<br/>
+        silvia de la Vallette<br/>
+        santa puala farm | Pittsboro, NC 27312<br/>
+        📧 silinsprings@gmail.com<br/>
+        📞 7074778090
+      </div>
+
+      <h3>Template 2: Farmers Market Booth Manager</h3>
+      <div class="email-template">
+        <div class="email-subject">Subject: Booth Space Request - Santa Puala Farm</div>
+        <br/>
+        Hello [Market Manager Name],<br/>
+        <br/>
+        I'm interested in securing a booth at [Market Name] for the 2026 season. I grow specialty produce and flowers on a small regenerative farm in Pittsboro.<br/>
+        <br/>
+        Can you share:<br/>
+        1. Available booth spaces (especially for March-November)<br/>
+        2. Weekly booth fee<br/>
+        3. Setup times and market requirements<br/>
+        <br/>
+        I'm committed to weekly attendance and excited to introduce local customers to our farm.<br/>
+        <br/>
+        Best,<br/>
+        silvia de la Vallette<br/>
+        📧 silinsprings@gmail.com | 📞 7074778090
+      </div>
+
+      <h3>Template 3: CSA Add-On Items</h3>
+      <div class="email-template">
+        <div class="email-subject">Subject: Local Supplier Interest - Specialty Produce Add-Ons</div>
+        <br/>
+        Hello [CSA Manager Name],<br/>
+        <br/>
+        I'm reaching out to introduce santa puala farm as a potential supplier of specialty items for your CSA members.<br/>
+        <br/>
+        We specialize in:<br/>
+        • Fresh herbs (basil, cilantro, parsley, mint) - weekly<br/>
+        • Salad greens & microgreens - weekly<br/>
+        • Ginger & turmeric - seasonal (fall)<br/>
+        • Cut flower bouquets - seasonal<br/>
+        <br/>
+        We're based locally in Pittsboro and can deliver [Your availability]. Would you be interested in discussing this as an add-on for your members?<br/>
+        <br/>
+        Best,<br/>
+        silvia de la Vallette<br/>
+        📧 silinsprings@gmail.com | 📞 7074778090
+      </div>
+
+      <h3>Template 4: Weekly Availability Sheet (Send Every Sunday)</h3>
+      <div class="email-template">
+        <div class="email-subject">Subject: Santa Puala Farm - Weekly Availability [Week of April 15]</div>
+        <br/>
+        Hello [Buyer Name],<br/>
+        <br/>
+        <strong>WEEK OF APRIL 15, 2026</strong><br/>
+        Delivery/Pickup: [Your day + time]<br/>
+        <br/>
+        **AVAILABLE THIS WEEK:**<br/>
+        ✓ Spring Mix - 10 lb cases @ $8/case (4 available)<br/>
+        ✓ Arugula - 5 lb cases @ $6/case (6 available)<br/>
+        ✓ Fresh Basil - bunches @ $2 each (20 available)<br/>
+        ✓ Cilantro - bunches @ $2 each (15 available)<br/>
+        ✓ Parsley - bunches @ $1.50 each (10 available)<br/>
+        <br/>
+        **COMING SOON (order now for next week):**<br/>
+        • Spring flowers (mixed bouquets)<br/>
+        <br/>
+        Please reply with what you'd like, and I'll have it ready for [delivery day]. Payment due at delivery.<br/>
+        <br/>
+        Questions? Call or text anytime.<br/>
+        <br/>
+        Best,<br/>
+        silvia<br/>
+        7074778090
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💰 Pricing Strategy: What to Charge</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Buyer Type</th>
+            <th>Price You Charge</th>
+            <th>Your Profit Margin</th>
+            <th>Example: Bunch of Basil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Farmers Market (Direct Consumer)</strong></td>
+            <td>Retail - 100%</td>
+            <td>High (80-90%)</td>
+            <td>$4-5 per bunch</td>
+          </tr>
+          <tr>
+            <td><strong>Restaurant</strong></td>
+            <td>60-70% of retail</td>
+            <td>Medium (50-60%)</td>
+            <td>$2.50-3.50 per bunch</td>
+          </tr>
+          <tr>
+            <td><strong>CSA Add-On</strong></td>
+            <td>70-80% of retail</td>
+            <td>Medium-High (60-70%)</td>
+            <td>$3-4 per bunch</td>
+          </tr>
+          <tr>
+            <td><strong>Grocery Store/Co-Op</strong></td>
+            <td>50-60% of retail</td>
+            <td>Medium (40-50%)</td>
+            <td>$2-2.50 per bunch</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <strong>💡 Pricing Tip:</strong> Don't undercut to win business. Farmers markets thrive on word-of-mouth. One farmer selling at competitive prices builds reputation, not margin. Stay profitable or you'll burn out.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Quick Win: Your First 30 Days</h2>
+
+      <div class="success-box">
+        <strong>✅ REALISTIC GOAL:</strong><br/>
+        By end of April 2026, have:<br/>
+        ✓ 1 confirmed farmers market booth (weekly income: $200-400)<br/>
+        ✓ 1-2 restaurant meetings scheduled<br/>
+        ✓ 1 CSA open to discussing trial<br/>
+        ✓ 3-5 customers you're actually delivering to
+      </div>
+
+      <p style="margin-top: 1em;">This isn't aggressive. You're not trying to go from zero to $5k/week. You're building ONE relationship at a time. Each relationship teaches you what the next buyer needs.</p>
+    </div>
+
+    <div class="section">
+      <h2>📞 When to Follow Up</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Wait Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Email sent, no response</td>
+            <td>3-4 days</td>
+            <td>Make phone call</td>
+          </tr>
+          <tr>
+            <td>Left voicemail</td>
+            <td>2 days</td>
+            <td>Try again or email</td>
+          </tr>
+          <tr>
+            <td>Had meeting, waiting on decision</td>
+            <td>5-7 days</td>
+            <td>Light check-in call ("Just following up!")</td>
+          </tr>
+          <tr>
+            <td>Buyer says "maybe, let me think"</td>
+            <td>2 weeks</td>
+            <td>Send availability + sample</td>
+          </tr>
+          <tr>
+            <td>No decision after 2 check-ins</td>
+            <td>-</td>
+            <td>Move to next prospect (don't waste time)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>⚠️ Common Mistakes (Don't Do These)</h2>
+
+      <div class="warning-box">
+        <strong>❌ Mistake 1:</strong> "I'll just show up with samples"<br/>
+        Better way: Email/call first, THEN show up with samples. Surprise visits often mean they're busy.
+      </div>
+
+      <div class="warning-box">
+        <strong>❌ Mistake 2:</strong> "I'll sell at the farmers market and that's enough"<br/>
+        Better way: Farmers market is great but time-intensive. Build 2-3 restaurant/CSA buyers at same time for passive income.
+      </div>
+
+      <div class="warning-box">
+        <strong>❌ Mistake 3:</strong> "I'll offer wholesale prices to everyone"<br/>
+        Better way: Farmers market = retail prices. Restaurants/stores = wholesale. Don't leave money on table.
+      </div>
+
+      <div class="warning-box">
+        <strong>❌ Mistake 4:</strong> "I'll chase big grocery stores first"<br/>
+        Better way: Start with farmers markets + restaurants + CSAs. Build track record THEN approach bigger buyers.
+      </div>
+
+      <div class="warning-box">
+        <strong>❌ Mistake 5:</strong> "I don't have a consistent supply, so I won't reach out"<br/>
+        Better way: Contact buyers and ask what THEY need. Some markets want weekly, some want seasonal only. Honest communication builds trust.
+      </div>
+    </div>
+
+    <div class="button-group">
+      <a href="index.html" class="button">← Back to Home</a>
+      <a href="Buyer_Outreach_Templates.md" class="button" target="_blank">📄 Outreach Templates</a>
+      <a href="Buyer_OnePager_27312.md" class="button" target="_blank">📋 Buyer One-Pager</a>
+    </div>
+  </main>
+
+  <footer>
+    santa puala farm • Pittsboro, North Carolina • 2026
+  </footer>
+</body>
+</html>
